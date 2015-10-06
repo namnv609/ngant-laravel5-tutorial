@@ -1,12 +1,16 @@
+@extends('layouts.application')
+
+@section('title', 'Login')
 @if (count($errors) > 0)
     <div class="alert alert-danger">
         <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
+        @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
         </ul>
     </div>
 @endif
+@section('content')
 <div class="row">
     <div class="col-md-6 col-md-offset-3">
         <form method="POST" action="/auth/login">
@@ -32,3 +36,4 @@
         </form>
     </div>
 </div>
+@stop
