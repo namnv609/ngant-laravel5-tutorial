@@ -20,3 +20,5 @@ Route::post('auth/login', 'Auth\AuthController@postLogin');
 Route::get('auth/logout', 'Auth\AuthController@getLogout');
 
 Route::resource('categories', 'CategoryController');
+Route::resource('categories.articles', 'CategoryArticleController');
+
